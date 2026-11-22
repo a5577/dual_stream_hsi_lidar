@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+cd "$(dirname "$0")/../.."
+
+PYTHON_BIN="${PYTHON_BIN:-python}"
+"${PYTHON_BIN}" -m dual_stream_hsi_lidar.train \
+  --dataset-dir Houston2013 \
+  --output-dir dual_stream_hsi_lidar/runs/fusion \
+  --fusion-mode fusion \
+  --workers 0 \
+  "$@"
+

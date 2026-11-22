@@ -1,0 +1,340 @@
+{
+  "runs": {
+    "fusion": {
+      "path": "dual_stream_hsi_lidar/runs/fusion",
+      "overall": {
+        "oa": 0.8816922193982126,
+        "aa": 0.8963998512431856,
+        "kappa": 0.8716676297036389,
+        "macro_precision": 0.8795447237100721,
+        "macro_f1": 0.8785011084422222,
+        "error_rate": 0.11830778060178737,
+        "loss": 0.7017348552616129
+      },
+      "per_class_accuracy": [
+        0.7834757834757835,
+        0.8721804511278195,
+        0.9742574257425742,
+        0.8702651515151515,
+        0.9962121212121212,
+        0.958041958041958,
+        0.7938432835820896,
+        0.8936372269705603,
+        0.8970727101038716,
+        0.666988416988417,
+        1.0,
+        0.9260326609029779,
+        0.8245614035087719,
+        1.0,
+        0.9894291754756871
+      ]
+    },
+    "hsi_only": {
+      "path": "dual_stream_hsi_lidar/runs/hsi_only",
+      "overall": {
+        "oa": 0.8361892268590637,
+        "aa": 0.8568077527297031,
+        "kappa": 0.8221468965295731,
+        "macro_precision": 0.8667692581925673,
+        "macro_f1": 0.8542896918466434,
+        "error_rate": 0.16381077314093628,
+        "loss": 0.8829635062295511
+      },
+      "per_class_accuracy": [
+        0.7663817663817664,
+        0.8515037593984962,
+        0.9841584158415841,
+        0.7301136363636364,
+        0.9962121212121212,
+        0.8881118881118881,
+        0.6697761194029851,
+        0.8888888888888888,
+        0.704438149197356,
+        0.7017374517374517,
+        0.9620493358633776,
+        0.9250720461095101,
+        0.8280701754385965,
+        1.0,
+        0.9556025369978859
+      ]
+    },
+    "lidar_only": {
+      "path": "dual_stream_hsi_lidar/runs/lidar_only",
+      "overall": {
+        "oa": 0.7169795851438878,
+        "aa": 0.7247673437986041,
+        "kappa": 0.6929729475570356,
+        "macro_precision": 0.7150631495424797,
+        "macro_f1": 0.7111786339371163,
+        "error_rate": 0.2830204148561122,
+        "loss": 1.1256034239995887
+      },
+      "per_class_accuracy": [
+        0.49382716049382713,
+        0.5695488721804511,
+        0.8356435643564356,
+        0.7395833333333334,
+        0.7348484848484849,
+        0.6503496503496503,
+        0.8526119402985075,
+        0.9287749287749287,
+        0.6355051935788479,
+        0.5974903474903475,
+        0.9335863377609108,
+        0.6416906820365034,
+        0.7263157894736842,
+        0.9757085020242915,
+        0.5560253699788583
+      ]
+    }
+  },
+  "main_vs_ablations": {
+    "hsi_only": {
+      "oa": 0.04550299253914891,
+      "aa": 0.03959209851348244,
+      "kappa": 0.0495207331740658,
+      "macro_precision": 0.012775465517504747,
+      "macro_f1": 0.024211416595578794,
+      "error_rate": -0.04550299253914891
+    },
+    "lidar_only": {
+      "oa": 0.1647126342543248,
+      "aa": 0.17163250744458147,
+      "kappa": 0.17869468214660322,
+      "macro_precision": 0.16448157416759235,
+      "macro_f1": 0.16732247450510584,
+      "error_rate": -0.1647126342543248
+    }
+  },
+  "per_class": [
+    {
+      "class_id": 1,
+      "class_name": "Healthy grass",
+      "fusion_accuracy": 0.7834757834757835,
+      "best_unimodal_accuracy": 0.7663817663817664,
+      "gain_vs_best_unimodal": 0.017094017094017144,
+      "gain_vs_hsi_only": 0.017094017094017144,
+      "gain_vs_lidar_only": 0.28964862298195637
+    },
+    {
+      "class_id": 2,
+      "class_name": "Stressed grass",
+      "fusion_accuracy": 0.8721804511278195,
+      "best_unimodal_accuracy": 0.8515037593984962,
+      "gain_vs_best_unimodal": 0.020676691729323293,
+      "gain_vs_hsi_only": 0.020676691729323293,
+      "gain_vs_lidar_only": 0.30263157894736836
+    },
+    {
+      "class_id": 3,
+      "class_name": "Synthetic grass",
+      "fusion_accuracy": 0.9742574257425742,
+      "best_unimodal_accuracy": 0.9841584158415841,
+      "gain_vs_best_unimodal": -0.00990099009900991,
+      "gain_vs_hsi_only": -0.00990099009900991,
+      "gain_vs_lidar_only": 0.13861386138613863
+    },
+    {
+      "class_id": 4,
+      "class_name": "Trees",
+      "fusion_accuracy": 0.8702651515151515,
+      "best_unimodal_accuracy": 0.7395833333333334,
+      "gain_vs_best_unimodal": 0.13068181818181812,
+      "gain_vs_hsi_only": 0.14015151515151514,
+      "gain_vs_lidar_only": 0.13068181818181812
+    },
+    {
+      "class_id": 5,
+      "class_name": "Soil",
+      "fusion_accuracy": 0.9962121212121212,
+      "best_unimodal_accuracy": 0.9962121212121212,
+      "gain_vs_best_unimodal": 0.0,
+      "gain_vs_hsi_only": 0.0,
+      "gain_vs_lidar_only": 0.26136363636363635
+    },
+    {
+      "class_id": 6,
+      "class_name": "Water",
+      "fusion_accuracy": 0.958041958041958,
+      "best_unimodal_accuracy": 0.8881118881118881,
+      "gain_vs_best_unimodal": 0.0699300699300699,
+      "gain_vs_hsi_only": 0.0699300699300699,
+      "gain_vs_lidar_only": 0.3076923076923077
+    },
+    {
+      "class_id": 7,
+      "class_name": "Residential",
+      "fusion_accuracy": 0.7938432835820896,
+      "best_unimodal_accuracy": 0.8526119402985075,
+      "gain_vs_best_unimodal": -0.058768656716417955,
+      "gain_vs_hsi_only": 0.12406716417910446,
+      "gain_vs_lidar_only": -0.058768656716417955
+    },
+    {
+      "class_id": 8,
+      "class_name": "Commercial",
+      "fusion_accuracy": 0.8936372269705603,
+      "best_unimodal_accuracy": 0.9287749287749287,
+      "gain_vs_best_unimodal": -0.03513770180436848,
+      "gain_vs_hsi_only": 0.0047483380816714105,
+      "gain_vs_lidar_only": -0.03513770180436848
+    },
+    {
+      "class_id": 9,
+      "class_name": "Road",
+      "fusion_accuracy": 0.8970727101038716,
+      "best_unimodal_accuracy": 0.704438149197356,
+      "gain_vs_best_unimodal": 0.19263456090651554,
+      "gain_vs_hsi_only": 0.19263456090651554,
+      "gain_vs_lidar_only": 0.26156751652502364
+    },
+    {
+      "class_id": 10,
+      "class_name": "Highway",
+      "fusion_accuracy": 0.666988416988417,
+      "best_unimodal_accuracy": 0.7017374517374517,
+      "gain_vs_best_unimodal": -0.03474903474903468,
+      "gain_vs_hsi_only": -0.03474903474903468,
+      "gain_vs_lidar_only": 0.06949806949806958
+    },
+    {
+      "class_id": 11,
+      "class_name": "Railway",
+      "fusion_accuracy": 1.0,
+      "best_unimodal_accuracy": 0.9620493358633776,
+      "gain_vs_best_unimodal": 0.0379506641366224,
+      "gain_vs_hsi_only": 0.0379506641366224,
+      "gain_vs_lidar_only": 0.06641366223908918
+    },
+    {
+      "class_id": 12,
+      "class_name": "Parking Lot 1",
+      "fusion_accuracy": 0.9260326609029779,
+      "best_unimodal_accuracy": 0.9250720461095101,
+      "gain_vs_best_unimodal": 0.0009606147934677622,
+      "gain_vs_hsi_only": 0.0009606147934677622,
+      "gain_vs_lidar_only": 0.2843419788664745
+    },
+    {
+      "class_id": 13,
+      "class_name": "Parking Lot 2",
+      "fusion_accuracy": 0.8245614035087719,
+      "best_unimodal_accuracy": 0.8280701754385965,
+      "gain_vs_best_unimodal": -0.0035087719298245723,
+      "gain_vs_hsi_only": -0.0035087719298245723,
+      "gain_vs_lidar_only": 0.09824561403508769
+    },
+    {
+      "class_id": 14,
+      "class_name": "Tennis Court",
+      "fusion_accuracy": 1.0,
+      "best_unimodal_accuracy": 1.0,
+      "gain_vs_best_unimodal": 0.0,
+      "gain_vs_hsi_only": 0.0,
+      "gain_vs_lidar_only": 0.02429149797570851
+    },
+    {
+      "class_id": 15,
+      "class_name": "Running Track",
+      "fusion_accuracy": 0.9894291754756871,
+      "best_unimodal_accuracy": 0.9556025369978859,
+      "gain_vs_best_unimodal": 0.03382663847780121,
+      "gain_vs_hsi_only": 0.03382663847780121,
+      "gain_vs_lidar_only": 0.4334038054968288
+    }
+  ],
+  "largest_gains_vs_best_unimodal": [
+    {
+      "class_id": 9,
+      "class_name": "Road",
+      "fusion_accuracy": 0.8970727101038716,
+      "best_unimodal_accuracy": 0.704438149197356,
+      "gain_vs_best_unimodal": 0.19263456090651554,
+      "gain_vs_hsi_only": 0.19263456090651554,
+      "gain_vs_lidar_only": 0.26156751652502364
+    },
+    {
+      "class_id": 4,
+      "class_name": "Trees",
+      "fusion_accuracy": 0.8702651515151515,
+      "best_unimodal_accuracy": 0.7395833333333334,
+      "gain_vs_best_unimodal": 0.13068181818181812,
+      "gain_vs_hsi_only": 0.14015151515151514,
+      "gain_vs_lidar_only": 0.13068181818181812
+    },
+    {
+      "class_id": 6,
+      "class_name": "Water",
+      "fusion_accuracy": 0.958041958041958,
+      "best_unimodal_accuracy": 0.8881118881118881,
+      "gain_vs_best_unimodal": 0.0699300699300699,
+      "gain_vs_hsi_only": 0.0699300699300699,
+      "gain_vs_lidar_only": 0.3076923076923077
+    },
+    {
+      "class_id": 11,
+      "class_name": "Railway",
+      "fusion_accuracy": 1.0,
+      "best_unimodal_accuracy": 0.9620493358633776,
+      "gain_vs_best_unimodal": 0.0379506641366224,
+      "gain_vs_hsi_only": 0.0379506641366224,
+      "gain_vs_lidar_only": 0.06641366223908918
+    },
+    {
+      "class_id": 15,
+      "class_name": "Running Track",
+      "fusion_accuracy": 0.9894291754756871,
+      "best_unimodal_accuracy": 0.9556025369978859,
+      "gain_vs_best_unimodal": 0.03382663847780121,
+      "gain_vs_hsi_only": 0.03382663847780121,
+      "gain_vs_lidar_only": 0.4334038054968288
+    }
+  ],
+  "largest_losses_vs_best_unimodal": [
+    {
+      "class_id": 7,
+      "class_name": "Residential",
+      "fusion_accuracy": 0.7938432835820896,
+      "best_unimodal_accuracy": 0.8526119402985075,
+      "gain_vs_best_unimodal": -0.058768656716417955,
+      "gain_vs_hsi_only": 0.12406716417910446,
+      "gain_vs_lidar_only": -0.058768656716417955
+    },
+    {
+      "class_id": 8,
+      "class_name": "Commercial",
+      "fusion_accuracy": 0.8936372269705603,
+      "best_unimodal_accuracy": 0.9287749287749287,
+      "gain_vs_best_unimodal": -0.03513770180436848,
+      "gain_vs_hsi_only": 0.0047483380816714105,
+      "gain_vs_lidar_only": -0.03513770180436848
+    },
+    {
+      "class_id": 10,
+      "class_name": "Highway",
+      "fusion_accuracy": 0.666988416988417,
+      "best_unimodal_accuracy": 0.7017374517374517,
+      "gain_vs_best_unimodal": -0.03474903474903468,
+      "gain_vs_hsi_only": -0.03474903474903468,
+      "gain_vs_lidar_only": 0.06949806949806958
+    },
+    {
+      "class_id": 3,
+      "class_name": "Synthetic grass",
+      "fusion_accuracy": 0.9742574257425742,
+      "best_unimodal_accuracy": 0.9841584158415841,
+      "gain_vs_best_unimodal": -0.00990099009900991,
+      "gain_vs_hsi_only": -0.00990099009900991,
+      "gain_vs_lidar_only": 0.13861386138613863
+    },
+    {
+      "class_id": 13,
+      "class_name": "Parking Lot 2",
+      "fusion_accuracy": 0.8245614035087719,
+      "best_unimodal_accuracy": 0.8280701754385965,
+      "gain_vs_best_unimodal": -0.0035087719298245723,
+      "gain_vs_hsi_only": -0.0035087719298245723,
+      "gain_vs_lidar_only": 0.09824561403508769
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Local datasets and preprocessing caches
+cache/
+data/
+
+# Generated model and array artifacts
+*.pt
+*.pth
+*.ckpt
+*.mat
+*.npz
+
+# Raw experiment runs; keep only curated comparison outputs
+runs/*
+!runs/comparison/
+!runs/weight_sweep_comparison/
+
+# Editor and system files
+.DS_Store
+.idea/
+.vscode/
+.matplotlib/
